@@ -1,5 +1,10 @@
 function fibonacci(num) {
-  // type your code here
+  let fibSequence = [0, 1];
+
+  for (let i = 2; i < num + 1; i++) {
+    fibSequence.push(fibSequence[i - 1] + fibSequence[i - 2]);
+  }
+  return fibSequence[num];
 }
 
 if (require.main === module) {
@@ -19,6 +24,3 @@ if (require.main === module) {
 }
 
 module.exports = fibonacci;
-
-// Please add your pseudocode to this file
-// And a written explanation of your solution
